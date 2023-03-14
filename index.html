@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wn Earnings Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<button id="help-btn"><span>?</span></button>
+	<div id="help-text">
+		<p>
+			This webapp is still in development.<br>
+			I'll try to make it better with time.
+		</p>
+	</div>
+	<div id="word-count-message"></div>
+	<div class="container">
+		<h1>Webnovel Earnings Calculator</h1>
+		<div class="input-section">
+			<label for="subs">Subs So Far:</label>
+			<input type="number" id="subs" placeholder="Enter the number of subs..."
+				oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+		</div>
+		<div class="input-section">
+			<label for="word-count">Chapter Word Count:</label>
+			<input type="number" id="word-count" placeholder="Enter the chapter word count..."
+				oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+		</div>
+		<div class="input-section">
+			<label for="priv-coins">Privilege Coins:</label>
+			<input type="number" id="priv-coins" placeholder="Enter the number of privilege coins..."
+				oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+		</div>
+		<button onclick="calculateTotalEarnings()">Calculate</button>
+		<div class="result-section">
+			<label for="total-earned">Total Earned:</label>
+			<input type="text" id="total-earned" readonly>
+		</div>
+		<div class="message-section">
+			<p id="message"></p>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
