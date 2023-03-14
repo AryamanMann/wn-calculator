@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Wn Earnings Calculator</title>
+	<title>Frontyard</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="images/tree-solid.svg">
 </head>
 
 <body>
-	<button id="help-btn"><span>?</span></button>
-	<div id="help-text">
-		<p>
-			This webapp is still in development.<br>
-			I'll try to make it better with time.
-		</p>
-	</div>
+<nav>
+	<ul>
+		<li><a href="index.html" id="frontyard-link"><img src="images/tree-solid.svg" alt="Frontyard"></a></li>
+		<li><a href="backyard.html" id="backyard-link"><img src="images/leaf-solid.svg" alt="Backyard"></a></li>
+		<li><a href="https://www.webnovel.com/book/sacred-dragon-emperor-system_24848214606244205" id="donate-link" target="_blank"><img src="images/donate.svg"
+					alt="Donate"></a></li>
+	</ul>
+</nav>
+
 	<div id="word-count-message"></div>
 	<div class="container">
-		<h1>Webnovel Earnings Calculator</h1>
+		<h1 class="backyard-header">Webnovel Earnings Calculator</h1>
 		<div class="input-section">
 			<label for="subs">Subs So Far:</label>
 			<input type="number" id="subs" placeholder="Enter the number of subs..."
@@ -42,5 +46,22 @@
 		</div>
 	</div>
 	<script src="script.js"></script>
+	<script>
+		const calculatorLink = document.getElementById("calculator-link");
+		const aboutLink = document.getElementById("about-link");
+		const calculatorSection = document.getElementById("calculator");
+		const aboutSection = document.getElementById("about");
+
+		calculatorLink.addEventListener("click", () => {
+			calculatorSection.style.display = "block";
+			aboutSection.style.display = "none";
+		});
+
+		aboutLink.addEventListener("click", () => {
+			calculatorSection.style.display = "none";
+			aboutSection.style.display = "block";
+		});
+	</script>
 </body>
+
 </html>

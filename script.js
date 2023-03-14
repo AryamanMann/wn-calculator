@@ -92,8 +92,8 @@ function calculateTotalEarnings() {
     }
 
     fetchMotivationalQuote()
-
 }
+
 
 
 
